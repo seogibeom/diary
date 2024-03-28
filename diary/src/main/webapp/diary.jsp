@@ -159,9 +159,10 @@
 	<fieldset>
 	<legend><h1>[자유로운 일기장]</h1></legend>
    		<table>
-			<div style="text-align: end;">
-				<a class="none" style="color: white;" href="/diary/diaryList.jsp"><b>&nbsp;<&nbsp;L i s t&nbsp;>&nbsp;</b></a>
+   			<div style="text-align: end;">
+				<a class="none" style="color: white;" href="/diary/lunchVote.jsp"><b>밥🍚</b></a>
 			</div>
+		
 		
 			<div style="text-align: center;">
 		   	   <div >
@@ -169,6 +170,9 @@
 			   		<a class="none" style="color: white;" href="./diary.jsp?targetYear=<%=tYear%>&targetMonth=<%=tMonth-1%>"><b>◀◁◀</b></a>
 			   		<a class="none" style="color: white;"href="./diary.jsp?targetYear=<%=tYear%>&targetMonth=<%=tMonth+1%>"><b>▷▶▷</b></a>
 			   </div>
+			   	<div style="text-align: end;">
+				<a class="none" style="color: white;" href="/diary/diaryList.jsp"><b>&nbsp;<&nbsp;L i s t&nbsp;>&nbsp;</b></a>
+			</div>
 			   <div style="text-align: end;">
 			   		<b><a class="none" style="color: black;" href="/diary/addDiaryForm.jsp">✍️일기쓰기</a></b>
 			   </div>

@@ -51,30 +51,32 @@
 	%>
 			<span style="color: green;" align="center"><h1>D I A R Y</h1></span>
 		<table class="table table-hover">
-			<tr>
-				<th class="p-1 mb-1 bg-success text-white">날짜</th>
-				<td class="p-1 mb-1 bg-white text-success" name="diaryDate"><%=rs1.getString("diaryDate")%></td>
-				<th class="p-1 mb-1 bg-success text-white">날씨</th>
-				<td class="p-1 mb-1 bg-white text-success" name="weather"><%=rs1.getString("weather")%></td>
-			</tr>
-			<tr>
-				<th class="p-1 mb-1 bg-success text-white">제목</th>
-				<td class="p-1 mb-1 bg-white text-success" name="title" ><%=rs1.getString("title")%></td>
-				<th class="p-1 mb-1 bg-success text-white">기분</th>
-				<td class="p-1 mb-1 bg-white text-success" name="feeling" ><%=rs1.getString("feeling")%></td>
-			</tr>
-			<tr>
-				<th class="p-1 mb-1 bg-success text-white" colspan="4" >내용</th>
-			</tr>
-			<tr>
-				<td class="p-1 mb-1 bg-white text-success" name="content" colspan="4"><%=rs1.getString("content")%></td>
-			</tr>
-			<tr>
-				<th colspan="4"><a class="none" style="color: green;" href="/diary/diary.jsp">📅CALENDAR📅</a></th>
-			</tr>
-			<tr>
-				<th colspan="4"><a class="none" style="color: green;" href="/diary/diaryList.jsp"> 📋L I S T📋 </a></th>
-			</tr>
+			
+				<tr>
+					<th class="p-1 mb-1 bg-success text-white">날짜</th>
+					<td class="p-1 mb-1 bg-white text-success" name="diaryDate"><%=rs1.getString("diaryDate")%></td>
+					<th class="p-1 mb-1 bg-success text-white">날씨</th>
+					<td class="p-1 mb-1 bg-white text-success" name="weather"><%=rs1.getString("weather")%></td>
+				</tr>
+				<tr>
+					<th class="p-1 mb-1 bg-success text-white">제목</th>
+					<td class="p-1 mb-1 bg-white text-success" name="title" ><%=rs1.getString("title")%></td>
+					<th class="p-1 mb-1 bg-success text-white">기분</th>
+					<td class="p-1 mb-1 bg-white text-success" name="feeling" ><%=rs1.getString("feeling")%></td>
+				</tr>
+				<tr>
+					<th class="p-1 mb-1 bg-success text-white" style="text-align: center"colspan="4" >내용</th>
+				</tr>
+				<tr>
+					<th class="p-1 mb-1 bg-white text-black" name="content" colspan="4"><%=rs1.getString("content")%></th>
+				</tr>
+	
+				<tr>
+					<th colspan="4"><a class="none" style="color: green;" href="/diary/diary.jsp">📅CALENDAR📅</a></th>
+				</tr>
+				<tr>
+					<th colspan="5"><a class="none" style="color: green;" href="/diary/diaryList.jsp"> 📋L I S T📋 </a></th>
+				</tr>
 				
 				<a  class="page-link link-primary btn btn-outline-primary a-sgb2" 
 						href='./updateDiaryForm.jsp?diaryDate=<%=diaryDate%>'>
@@ -90,7 +92,6 @@
 		}
 	%>	
 		</div>
-		<div class="col"></div>
 	</div>
 </div>	
 </body>
