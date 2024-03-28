@@ -70,7 +70,10 @@
 				<td class="p-1 mb-1 bg-white text-success" name="content" colspan="4"><%=rs1.getString("content")%></td>
 			</tr>
 			<tr>
-				<th colspan="4"><a class="none" style="color: green;" href="/diary/diary.jsp">뒤로</a></th>
+				<th colspan="4"><a class="none" style="color: green;" href="/diary/diary.jsp">📅CALENDAR📅</a></th>
+			</tr>
+			<tr>
+				<th colspan="4"><a class="none" style="color: green;" href="/diary/diaryList.jsp"> 📋L I S T📋 </a></th>
 			</tr>
 				
 				<a  class="page-link link-primary btn btn-outline-primary a-sgb2" 
