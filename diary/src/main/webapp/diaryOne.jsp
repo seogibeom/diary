@@ -91,6 +91,55 @@
 	<%
 		}
 	%>	
+	<!--  =================댓글추가 폼================ -->
+							<div  style="text-align: center">
+								<form method="post" action="/diary/addCommentAction.jsp">
+								<table>
+									<tr>
+										<th>
+											댓글 입력 : 
+										</th>
+										<th rowspan="3">
+											<input type="hidden" name="diaryDate" value="<%=diaryDate%>">
+											<textarea rows="2" cols="50"  name="memo"></textarea>
+										</th>
+										<th>
+											<button type="submit" class="btn btn-secondary inline-block">입 력</button>
+										</th>
+								</table>
+								</form>
+							</div>
+	<!-- ================댓글 리스트================= -->
+					<%
+							String sql2 = "select comment_no commentNo, memo, create_date createDate from comment where diary_date=?";
+							PreparedStatement stmt2 = null;
+							ResultSet rs2 = null;
+							
+							stmt2 = conn.prepareStatement(sql2);
+							stmt2.setString(1, diaryDate);
+							rs2 = stmt2.executeQuery();
+					%>
+					
+					<div>
+						<h3 style="color:green;" align="center">댓글</h3>
+					</div>
+				 	<table border="1">
+				 		<%
+				 				while(rs2.next()) {
+				 		%>
+				 						<tr>
+				 							<td><%=rs2.getString("memo")%></td>
+				 							<td><%=rs2.getString("createDate")%></td>
+				 							<td>
+				 									<a class="page-link link-danger"  
+				 										 href='/diary/deleteComment.jsp?diaryDate=<%=diaryDate%>&commentNo=<%=rs2.getInt("commentNo")%>'> 삭제
+				 									</a>
+				 							</td>
+				 						</tr>
+				 		<%
+				 				}
+				 		%>
+				 	</table>
 		</div>
 	</div>
 </div>	

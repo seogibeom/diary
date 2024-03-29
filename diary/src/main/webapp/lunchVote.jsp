@@ -21,13 +21,12 @@ if(loginMember == null) {
 	FROM lunch
 	WHERE lunch_date = CURDATE();
 	*/
-	String lunch = request.getParameter("menu");
 	String sql2 = "select lunch_date lunchDate, menu from lunch where lunch_date = curdate()";
 	PreparedStatement stmt2 = null;
 	ResultSet rs2 = null;
 	stmt2 = conn.prepareStatement(sql2);
+
 	rs2 = stmt2.executeQuery();
-	
 %>
 
 <!DOCTYPE html>
@@ -42,15 +41,7 @@ if(loginMember == null) {
 	table {
 		margin-left:auto; 
     	margin-right:auto;
-	}
-	.a-sgb {
-	color:rgb(92, 209, 229);
-	text-decoration: none;
-	p-2; mb-2;	
-	}
-	.a-sgb2 {
-	text-align: end;
-	}
+		}
 	.none {text-decoration: none;}
 	th { text-align: center; }
 </style>
@@ -73,10 +64,28 @@ if(loginMember == null) {
 							</th>
 						</tr>
 						<tr>
+							<th class="p-1 mb-1 bg-white text-success"  >
+								<h3> <%=rs2.getString("lunchDate")%> 날에 드신 점심은 <%=rs2.getString("menu")%> 입니다.</h3>
+							</th>
+						</tr>
+						
+						<tr>
 							<th>
 								<a class="none" style="color: green;" href="/diary/statsLunch.jsp">
 									결과보러가기</a>
 							</th>
+						</tr>
+						<tr>
+							<td>
+									<a class="none" style="color: black;" href="/diary/diary.jsp">
+										<b>뒤로</b>
+									</a>
+							</td>
+							<td>
+									<a class="none" style="color: black;" href='/diary/deleteLunchVote.jsp?lunchDate= <%=rs2.getString("lunchDate")%>'>
+										<b>삭제</b>
+									</a>
+							</td>
 						</tr>
 						</table>
 				<%

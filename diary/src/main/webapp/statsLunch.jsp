@@ -58,7 +58,7 @@
 	<div class="row">
 		<div class="col"></div>
 		<div class="mt-5 bg-white border shadow p-3 mb-5 bg-body-tertiary rounded">
-	<span style="color: green;" align="center"><h1>statsLunch</h1></span>
+	<span style="color: green;" align="center"><h1>점심 통계</h1></span>
 	
 	<%
 				double maxHeight = 500;
@@ -105,8 +105,16 @@
 			%>
 		</tr>
 		<tr>
-					<th colspan="6"><a class="none" style="color: green;" href="/diary/statsLunchOne.jsp"> 상세보기 </a></th>
-				</tr>
+				<th colspan="6"><a class="none" style="color: green;" href="/diary/statsLunchOne.jsp"> 상세보기 </a></th>
+		</tr>
+		<tr>
+				<td>
+						<a class="none" style="color: black;" href="/diary/lunchVote.jsp">
+								<b>뒤로</b>
+						</a>
+				</td>
+		</tr>
+		
 	</table>
 			</div>
 		</div>
